@@ -1,0 +1,206 @@
+/* ✅ Container styling */
+.shop-container {
+  padding: 60px 20px;
+  width: 100%;
+  max-width: 1400px; /* Limit the max width for large screens */
+  margin: 0 auto;
+ 
+}
+
+/* ✅ Header row with shop heading and button */
+.shop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.shop-header h2 {
+  font-size: 36px;
+  color: #333;
+  
+  
+}
+
+/* ✅ Shop items grid */
+.shop-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  justify-content: center;
+}
+
+/* ✅ Card container */
+.shop-card {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 4 / 3; /* Maintain a consistent aspect ratio */
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shop-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Image container with full-screen fit */
+.shop-image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Cover the full area */
+  transition: transform 0.5s ease;
+}
+
+.shop-card:hover img {
+  transform: scale(1.1);
+}
+
+/* ✅ Text overlay */
+.text-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(20px);
+}
+
+.shop-card:hover .text-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ✅ Visit Shop Button */
+.visit-shop {
+  padding: 14px 50px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #4170E8;
+  border: none;
+ 
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s;
+ 
+  display: block;
+  text-align: center;
+}
+
+.visit-shop:hover {
+  background-color: #3558b2;
+  transform: translateY(-5px);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1200px) {
+  .shop-items {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+
+  .shop-card {
+    aspect-ratio: 16 / 9;  /* Adjust aspect ratio for medium screens */
+  }
+
+  .shop-header h2 {
+    font-size: 32px;
+  }
+
+  .visit-shop {
+    font-size: 16px;
+    padding: 12px 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .shop-items {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .shop-card {
+    aspect-ratio: 16 / 10; 
+  }
+
+  .text-overlay {
+    font-size: 24px;
+  }
+
+  .shop-header h2 {
+    font-size: 28px;
+  }
+
+  .visit-shop {
+    font-size: 14px;
+    padding: 12px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .shop-items {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .shop-card {
+    aspect-ratio: 1 / 1; /* Square ratio for smaller screens */
+  }
+
+  .text-overlay {
+    font-size: 22px;
+  }
+
+  .shop-header h2 {
+    font-size: 26px;
+  }
+
+  .visit-shop {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .shop-container {
+    padding: 40px 15px;
+  }
+
+  .shop-header h2 {
+    font-size: 24px;
+  }
+
+  .shop-items {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-card {
+    aspect-ratio: 1 / 1.2; 
+  }
+
+  .text-overlay {
+    font-size: 20px;
+  }
+
+  .visit-shop {
+    font-size: 14px;
+    padding: 10px 25px;
+    width: 100%;
+    max-width: 250px;
+  }
+}

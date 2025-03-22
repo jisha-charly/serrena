@@ -1,0 +1,122 @@
+.homepage {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .banner-content {
+    position: absolute;
+    top: 65%;
+    left:22%;
+    transform: translate(-50%, -50%);
+   
+    color: white;
+    z-index: 5;
+  }
+  
+  .banner-content h1 {
+    font-size:75px;
+    font-weight: bold;
+   text-transform: uppercase;
+  }
+  
+  .shop-btn {
+    margin-top: 20px;
+    width: 200px;
+    background-color: #316FF6;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .shop-btn:hover {
+    background-color: #0c0c0c;
+  }
+  
+  /* Background Banner Image */
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  /* ✅ Responsive Design */
+@media (max-width: 1200px) {
+  .banner-content h1 {
+    font-size: 60px;            /* Adjust heading size for large tablets */
+  }
+
+  .shop-btn {
+    width: 180px;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 992px) {
+  .banner-content h1 {
+    font-size: 50px;            /* Adjust heading size for medium tablets */
+  }
+
+  .shop-btn {
+    width: 160px;
+    padding: 12px 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-content {
+    top: 40%;
+    left: 50%;
+    text-align: center; /* Center text alignment */
+    width: 90%; /* Adjust width to fit smaller screens */
+  }
+
+  .banner-content h1 {
+    font-size: 40px;  
+  }
+
+}
+
+@media (max-width: 576px) {
+  .banner-content {
+    top: 40%;
+    left: 50%;
+    text-align: center; /* Center text alignment */
+    width: 90%;
+  }
+
+  .banner-content h1 {
+    font-size: 32px;  
+    margin: 0; /* Remove left margin */
+  }
+  .banner-image {
+    height: 60vh;
+  }
+  .shop-btn {
+    width: 130px;
+    text-align: center;
+    padding: 8px 18px;
+    font-size: 16px;
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  .banner-content h1 {
+    font-size: 26px;  
+             /* Adjust heading for extra small screens */
+  }
+
+  .shop-btn {
+    width: 120px;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}

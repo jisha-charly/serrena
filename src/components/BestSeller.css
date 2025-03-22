@@ -1,0 +1,206 @@
+/* Container Styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Title Styling */
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Product Grid */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  height: 450px;  /* Uniform height for the smaller images */
+}
+
+/* Make the second card taller */
+.taller-card .image-container {
+  height: 500px;  /* Taller height for the second image */
+}
+
+.taller-card .product-img {
+  height: 100%;
+  object-fit: cover; 
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Marquee styling */
+.marquee1 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+ 
+  color: #fff;
+  padding: 5px 0;
+  font-weight: bold;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+/* Marquee inner content */
+.marquee1 span {
+  display: inline-block;
+  padding-left: 100%;
+  font-size: 21px;
+  font-weight:500;
+  animation: marquee-scroll 10s linear infinite;
+}
+
+/* Keyframes for smooth scrolling */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+/* Discount Badge */
+.discount-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #4170E8;  /* Red background */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 5px;
+  z-index: 12;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Hover Effect */
+.image-container:hover .product-img {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+}
+
+/* Buy Now Button */
+.buy-now-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 10;
+  background-color: white;
+  color: rgb(5, 5, 5);
+  border: none;
+  padding: 10px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  
+}
+
+.image-container:hover .buy-now-btn {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Discount Badge */
+.badge {
+  font-size: 0.9rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+}
+
+/* Title & Price Styling */
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #080808;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .image-container {
+    height: 400px;  /* Slightly smaller on medium screens */
+  }
+
+  .taller-card .image-container {
+    height: 500px;  /* Slightly smaller for taller image on medium screens */
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .marquee {
+    font-size: 0.9rem;
+  }
+
+  .buy-now-btn {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .image-container {
+    height: 300px;  /* Smaller image height on small screens */
+  }
+
+  .taller-card .image-container {
+    height: 400px;  /* Taller image reduced for mobile */
+  }
+
+  .card-title {
+    font-size: 0.9rem;
+  }
+
+  .card-text {
+    font-size: 0.8rem;
+  }
+
+  .marquee {
+    font-size: 0.8rem;
+  }
+
+  .buy-now-btn {
+    font-size: 0.8rem;
+    padding: 6px 15px;
+  }
+}

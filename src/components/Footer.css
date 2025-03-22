@@ -1,0 +1,169 @@
+/* ====== Newsletter Section ====== */
+.newsletter-section {
+    height: 200px;
+    background-color: #4170E8;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Heading Styling */
+  .newsletter-heading {
+    font-size: 40px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  /* Button Styling */
+  .newsletter-btn {
+    padding: 12px 25px;
+    width:300px;
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 0%;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .newsletter-btn:hover {
+    background-color: #2f5bb7;
+    color: white;
+  }
+  
+  /* ====== Footer Content ====== */
+  .footer-container {
+    background-color: #f8f9fa;
+    color: #333;
+    margin-top: 80px;
+  }
+  
+  /* Footer Brand Styling */
+  .footer-brand h5 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .footer-brand p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Footer Navigation */
+  .footer-link {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .footer-link:hover {
+    color: #4170E8;
+    text-decoration: underline;
+  }
+  
+  /* Social Media Icons */
+  .social-icon {
+    transition: transform 0.3s, color 0.3s;
+    color: #333;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2);
+    color: #4170E8;
+  }
+  
+  /* Copyright Section */
+  .copyright {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* ====== Responsive Design ====== */
+  @media (max-width: 1200px) {
+    .newsletter-heading {
+      font-size: 32px;
+    }
+  
+    .newsletter-btn {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .newsletter-section {
+      flex-direction: column;
+      height: auto;
+      padding: 40px 20px;
+    }
+  
+    .newsletter-heading {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+  
+    .newsletter-btn {
+      width: 100%;
+      max-width: 280px;
+    }
+  
+    .footer-container {
+      text-align: center;
+    }
+  
+    .footer-brand, .footer-link, .social-icon {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .newsletter-heading {
+      font-size: 24px;
+    }
+  
+    .newsletter-btn {
+      width: 100%;
+      max-width: 250px;
+    }
+  
+    .social-icon {
+      font-size: 20px;
+    }
+  
+    .footer-link {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .newsletter-heading {
+      font-size: 20px;
+      line-height: 1.2;
+    }
+  
+    .newsletter-btn {
+      width: 100%;
+      max-width: 220px;
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  
+    .footer-brand h5 {
+      font-size: 20px;
+    }
+  
+    .footer-link {
+      font-size: 13px;
+    }
+  
+    .copyright {
+      font-size: 12px;
+    }
+  }
+  

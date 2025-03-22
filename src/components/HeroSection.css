@@ -1,0 +1,152 @@
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Full-screen height */
+  overflow: hidden;
+}
+
+/* Responsive video background */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content {
+  position: absolute;
+  top: 70%;
+  left: 4%;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 800px;
+}
+
+/* Title and Description Styling */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description {
+  width: 490px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Shop Link */
+.shop-link {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.shop-link::after {
+  content: "→";
+  font-weight: bolder;
+  transition: transform 0.3s ease-in-out;
+}
+
+.shop-link:hover::after {
+  transform: translateX(5px);
+}
+
+/* ✅ Responsive Centering */
+@media (max-width: 1200px) {
+  .content {
+    top: 60%;
+    left: 5%;
+    max-width: 600px; 
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .content {
+    top: 55%;
+    left: 5%;
+    max-width: 500px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; /* Center text */
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 400px) {
+  .content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+  }
+}

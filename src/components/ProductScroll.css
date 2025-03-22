@@ -1,0 +1,201 @@
+/* ✅ Wrapper for the scroll section */
+.scroll-wrapper {
+  overflow: hidden;
+  width: 1040px; /* Fits 4 items */
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* ✅ Container with smooth transition for auto-scrolling */
+.scroll-container {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out; /* Smooth scrolling effect */
+}
+
+/* ✅ Hide the scrollbar */
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* ✅ Individual product card */
+.product-card {
+  position: relative;
+  flex: 0 0 auto;
+  width: 250px; /* Fixed width */
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+/* ✅ Product image styling */
+.product-image {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+}
+
+/* ✅ Overlay with Buy Now button */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Hidden by default */
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* ✅ Buy Now button styling */
+.buy-now1 {
+  padding: 10px 20px;
+  width: 130px;
+  font-size: 16px;
+  color: black;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 1;
+  transition: background 0.3s;
+}
+
+.buy-now1:hover {
+  background-color: black;
+  color: white;
+}
+
+/* ✅ Show overlay when hovering over product card */
+.product-card:hover .overlay {
+  opacity: 1;
+}
+
+/* ✅ Scroll buttons styling */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #363636; /* Circular background */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Circular shape */
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease-in-out, transform 0.3s;
+}
+
+/* ✅ Center the arrows perfectly */
+.left {
+  left: 20px; 
+}
+
+.right {
+  right: 20px;
+}
+
+/* ✅ Arrow hover effect */
+.scroll-btn:hover {
+  background: #343435; /* Hover effect */
+  transform: scale(1.1);
+}
+
+/* ✅ Disabled arrows */
+.scroll-btn:disabled {
+  background: lightgray;
+  color: #fff;
+  cursor: not-allowed;
+  transform: scale(1);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1200px) {
+  .scroll-wrapper {
+    width: 840px; /* Fits 3 items */
+  }
+
+  .product-card {
+    width: 270px;
+  }
+
+  .scroll-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 992px) {
+  .scroll-wrapper {
+    width: 600px; /* Fits 2 items */
+  }
+
+  .product-card {
+    width: 280px;
+  }
+
+  .scroll-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-wrapper {
+    width: 300px; /* Fits 1 item */
+  }
+
+  .product-card {
+    width: 100%;
+  }
+
+  .scroll-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .left, .right {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 576px) {
+  .scroll-wrapper {
+    width: 100%; /* Full width on small screens */
+  }
+
+  .product-card {
+    width: 90%;
+  }
+
+  .scroll-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .left, .right {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
