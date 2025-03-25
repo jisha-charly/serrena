@@ -10,7 +10,7 @@ const HomePage = () => {
   return (
     <div className="homepage">
 
-   <NavBar/>
+  <NavBar/>
    
     
     <div className="banner-content">

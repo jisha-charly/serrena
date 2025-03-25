@@ -1,0 +1,106 @@
+/* Breadcrumb styles */
+.breadcrumb {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Category buttons */
+  .btn-outline-dark {
+    transition: 0.3s;
+  }
+  .btn-outline-dark.active {
+    background-color: #f8f5f5;
+    color: #0c0c0c;
+  }
+  
+  /* Product card */
+  .product-card {
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-height: 450px; /* Consistent card height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .product-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Image container with fixed size */
+  .img-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;  /* Fixed height for consistent image size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensures images fill the container proportionally */
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect for image */
+  .img-container:hover img {
+    transform: scale(1.1);  /* Smooth zoom on hover */
+  }
+  
+  /* Discount badge */
+  .discount-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    z-index: 1;
+  }
+  
+  /* Buy Now button */
+  .buy-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background: #f8f7f7;
+    color: #0f0f0f;
+    border: none;
+    opacity: 0;
+    transition: opacity 0.3s, bottom 0.3s;
+    cursor: pointer;
+  }
+  .img-container:hover .buy-btn {
+    opacity: 1;
+    bottom: 30px;  /* Moves up slightly on hover */
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .product-card {
+      min-height: 400px;  /* Adjust height for medium screens */
+    }
+    .img-container {
+      height: 250px;  /* Smaller image size */
+    }
+  }
+  @media (max-width: 768px) {
+    .breadcrumb {
+      font-size: 0.9rem;
+    }
+    .btn {
+      font-size: 0.9rem;
+    }
+    .product-card {
+      min-height: 350px;  /* Smaller height for smaller screens */
+    }
+    .img-container {
+      height: 200px;  /* Smaller image size */
+    }
+  }
+  

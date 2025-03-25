@@ -30,7 +30,7 @@
 @media (max-width: 768px) {
   .logo-container {
     margin: 50px 20px 120px;        /* Smaller margins for tablets */
-    gap: 25px;                      /* Space between logos */
+    gap: 40px;                      /* Space between logos */
   }
 
   .logo-image {
@@ -40,8 +40,9 @@
 
 @media (max-width: 576px) {
   .logo-container {
-    margin: 40px 10px 90px;         /* Smaller margins for mobile devices */
-    gap: 20px;                      /* Consistent spacing */
+    margin: 40px 10px 90px;  
+         /* Smaller margins for mobile devices */
+    gap: 40px;                      /* Consistent spacing */
   }
 
   .logo-image {

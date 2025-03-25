@@ -1,8 +1,24 @@
-/* Featured Container */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ✅ Remove Extra Space from Images */
+img {
+  display: block;  /* Removes extra bottom spacing */
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ✅ Featured Container */
+
 .featured-container {
   padding: 80px 40px;
   box-sizing: border-box;
-  margin-top: 120px;
+  margin-top: 200px;
+
 }
 
 /* Title */
@@ -12,53 +28,70 @@
   margin-bottom: 40px;
 }
 
-/* Products Grid */
+/* ✅ Products Grid - No Space Between Images */
 .products {
   display: grid;
+ 
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: 0;  /* No space between images */
   justify-content: center;
+  border-collapse: collapse;  /* Removes space caused by borders */
+  margin: 90px; 
+ 
+  border-spacing: 0;  /* Ensures no internal gaps */
 }
 
-/* Product Card */
+/* ✅ Product Card */
 .product-card {
+  width: 1400px;
   background: #fff;
-  
-  border-radius: 10px;
+  border-radius: 0;  /* No rounded corners to prevent space */
   overflow: hidden;
   transition: transform 0.3s ease;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;  /* Prevent extra spacing */
+  margin: 0px;
+  padding: 0;
+  border: 0;  /* No border spacing */
+  width: 100%;
+  height: 100%;
 }
 
-/* Taller Third Image */
+/* ✅ Taller Third Image */
+.taller-card .image-container {
+  height: 450px; /* Taller image container */
+}
 .taller-card .image-container img {
-  height: 120%; /* Slightly taller */
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Prevent stretching */
 }
 
-/* Hover Effect */
-.product-card:hover {
-  transform: translateY(-10px);
-}
-
-/* Image Container */
+/* ✅ Image Container */
 .image-container {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  height: 350px;  /* Uniform height */
+  margin: 0; 
+  padding: 0;
 }
-
 .image-container img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;  /* Ensures no gaps or stretching */
   transition: transform 0.3s;
 }
 
-/* Image Hover Zoom */
+/* ✅ Image Hover Zoom */
 .image-container:hover img {
   transform: scale(1.05);
 }
 
-/* Discount Badge */
+/* ✅ Discount Badge */
 .discount {
   position: absolute;
   top: 10px;
@@ -69,9 +102,10 @@
   font-size: 14px;
   font-weight: bold;
   border-radius: 4px;
+  z-index: 1;
 }
 
-/* Buy Now Button */
+/* ✅ Buy Now Button */
 .buy-now {
   position: absolute;
   top: 50%;
@@ -87,20 +121,20 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Button on Hover */
+/* ✅ Button on Hover */
 .image-container:hover .buy-now {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1.1);
 }
 
-/* Marquee on the Third Image */
+/* ✅ Marquee on the Third Image */
 .marquee3 {
   position: absolute;
   bottom: 0;
   width: 100%;
- 
   color: white;
-  padding: 5px 0;
+  background: rgba(0, 0, 0, 0.7);  /* Background for readability */
+  padding: 8px 0;
   font-size: 18px;
   font-weight: 500;
   white-space: nowrap;
@@ -123,7 +157,7 @@
   }
 }
 
-/* Product Info */
+/* ✅ Product Info */
 .product-card h3 {
   font-size: 20px;
   margin: 15px 0;
@@ -141,11 +175,17 @@
   .products {
     grid-template-columns: repeat(3, 1fr);
   }
+  .image-container {
+    height: 300px;  /* Adjust height */
+  }
 }
 
 @media (max-width: 992px) {
   .products {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .image-container {
+    height: 250px; 
   }
 }
 
@@ -153,10 +193,16 @@
   .products {
     grid-template-columns: repeat(1, 1fr);
   }
+  .image-container {
+    height: 220px; 
+  }
 }
 
 @media (max-width: 576px) {
   .products {
     grid-template-columns: 1fr;
+  }
+  .image-container {
+    height: 200px; 
   }
 }
